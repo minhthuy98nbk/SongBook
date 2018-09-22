@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Songbook</string>
+    <string name="title">Song book</string>
+    <string name="hatnhieu">Được hát nhiều nhất</string>
+    <string name="baimoi">Bài hát mới</string>
+    <string name="banthu">Bản thu gần đây</string>
+</resources>

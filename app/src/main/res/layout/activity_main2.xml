@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bar"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/arrow"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text ="Song Book"
+            android:textColor="@color/white"
+            android:layout_weight="3"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/search"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ahihiteam"
+        android:layout_below="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/banner"
+        android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/banner"
+        android:gravity="center"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_below="@id/ahihiteam"
+        android:paddingTop="@dimen/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/large_size"
+            android:text="Được hát nhiều nhất"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/large_size"
+                android:text="Bài hát mới"
+                android:textStyle="bold"
+                android:textColor="@color/yellow"/>
+            <ImageView
+                android:paddingTop="@dimen/top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/line"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/large_size"
+            android:text="Bản thu gần đây"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/top"
+            android:paddingLeft="@dimen/left"
+            android:paddingRight="@dimen/right">
+
+            <RelativeLayout
+                android:id="@+id/thangtu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_thangtu"
+                    android:layout_width="@dimen/photo"
+                    android:layout_height="@dimen/photo"
+                    android:src="@drawable/thangtu"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_thangtu"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/left">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_size"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:text="Tháng tư là lời nói dối của em"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_size"
+                        android:textStyle="bold"
+                        android:text="Hà Anh Tuấn - Official beat"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="@dimen/left">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/mic"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="5176 Lượt hát"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/yellow"
+                    android:text="Hát"
+                    android:textSize="@dimen/large_size"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tuhomnay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thangtu"
+                android:paddingTop="@dimen/top">
+
+                <ImageView
+                    android:id="@+id/img_tuhomnay"
+                    android:layout_width="@dimen/photo"
+                    android:layout_height="@dimen/photo"
+                    android:src="@drawable/tuhomnay" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_tuhomnay"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/left">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_size"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:text="Từ hôm nay (Feel like oh)"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_size"
+                        android:textStyle="bold"
+                        android:text="ChiPu - Official beat"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="@dimen/left">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/mic"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="4865 Lượt hát"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/yellow"
+                    android:text="Hát"
+                    android:textSize="@dimen/large_size"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bhlaychong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tuhomnay"
+                android:paddingTop="@dimen/top">
+
+                <ImageView
+                    android:id="@+id/img_bhlaychong"
+                    android:layout_width="@dimen/photo"
+                    android:layout_height="@dimen/photo"
+                    android:src="@drawable/bhlaychong" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_bhlaychong"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/left">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_size"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:text="Bao giờ lấy chồng"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_size"
+                        android:textStyle="bold"
+                        android:text="Bích Phương - Official beat"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="@dimen/left">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/mic"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="4532 Lượt hát"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/yellow"
+                    android:text="Hát"
+                    android:textSize="@dimen/large_size"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bhlaychong"
+                android:paddingTop="@dimen/top">
+
+                <ImageView
+                    android:id="@+id/img_sou"
+                    android:layout_width="@dimen/photo"
+                    android:layout_height="@dimen/photo"
+                    android:src="@drawable/sou" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_sou"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/left">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_size"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:text="Shape of you"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_size"
+                        android:textStyle="bold"
+                        android:text="Ed Shaaren - Official beat"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="@dimen/left">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/mic"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="4123 Lượt hát"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/yellow"
+                    android:text="Hát"
+                    android:textSize="@dimen/large_size"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cdnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sou"
+                android:paddingTop="@dimen/top">
+
+                <ImageView
+                    android:id="@+id/img_cdnd"
+                    android:layout_width="@dimen/photo"
+                    android:layout_height="@dimen/photo"
+                    android:src="@drawable/cdnd" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_cdnd"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/left">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_size"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:text="Chạm đáy nổi đau"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_size"
+                        android:textStyle="bold"
+                        android:text="Erik - Official beat"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="@dimen/left">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/mic"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="3985 Lượt hát"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/yellow"
+                    android:text="Hát"
+                    android:textSize="@dimen/large_size"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hk1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cdnd"
+                android:paddingTop="@dimen/top">
+
+                <ImageView
+                    android:id="@+id/img_hk1"
+                    android:layout_width="@dimen/photo"
+                    android:layout_height="@dimen/photo"
+                    android:src="@drawable/hk1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_hk1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/left">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/large_size"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:text="HongKong I"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/small_size"
+                        android:textStyle="bold"
+                        android:text="Nguyễn Trọng Tài - Official beat"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="@dimen/left">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/mic"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_size"
+                            android:textStyle="bold"
+                            android:text="3867 Lượt hát"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/yellow"
+                    android:text="Hát"
+                    android:textSize="@dimen/large_size"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
+
